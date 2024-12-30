@@ -1,0 +1,118 @@
+:root {
+  --left-and-right-padding: 10vw;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--left-and-right-padding);
+  padding-top: 2rem;
+  position: relative;
+  
+}
+
+.hero-section img {
+  width: 29vw;
+}
+
+.hero-section-content {
+  height: 100%;
+  text-align: center;
+  width: 50%;
+}
+
+.hero-section-content .heading-1,
+.hero-section-content .heading-2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.hero-section-content p {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.hero-section-content div {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-section-content div input {
+  padding: 8px 24px;
+  font-size: 22px;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  border: 1px solid rgba(128, 128, 128, 0.219);
+}
+
+#search-icon {
+  background-color: #e86ed0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  box-shadow: 0px 4px 8px #e86ed0;
+  border: 1px solid #e86ed021;
+  cursor: pointer;
+}
+
+.hero-arrow-animation{
+  border: 2px solid #e86ed0;
+  padding: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e86ed0;
+  position: absolute;
+  top: 95%;
+  right: 48%;
+}
+
+.hero-arrow-animation #arrow{
+  animation-name: arrowAnimation;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  overflow-y: hidden;
+  color: #fff;
+  
+  
+}
+
+@keyframes arrowAnimation{
+  from {
+    
+    transform: translateY(-20px);
+  }
+  to{
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+/* Desktop Break Point */
+@media (max-width:1280px) {
+    .hero-section-content .heading-1, .hero-section-content .heading-2{
+        font-size: 3rem;
+    }
+}
+
+/* Laptop Break Point */
+@media (max-width:1024px) {
+    .hero-section img{
+        width: 35vw;
+    }
+    .hero-section-content .heading-1, .hero-section-content .heading-2{
+        font-size: 2rem;
+    }
+    .hero-section-content p{
+        font-size: 1.1rem;
+    }
+    .hero-section-content div input{
+        font-size: 18px;
+    }
+}
+

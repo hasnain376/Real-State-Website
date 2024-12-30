@@ -1,0 +1,66 @@
+:root {
+  --left-and-right-padding: 10vw;
+  --primary-color:#e86ed0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 var(--left-and-right-padding);
+}
+
+nav h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.navbar-link ul {
+  display: flex;
+  gap: 26px;
+  text-transform: capitalize;
+}
+
+.navbar-link ul li a{
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.navbar-link ul li a:hover{
+  color: var(--primary-color);
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Tablet Break Point */
+@media (max-width: 912px) {
+  nav {
+    position: relative;
+  }
+  .navbar-link {
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    padding: var(--left-and-right-padding);
+    width: 98%;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: #fff;
+  }
+
+  .navbar-link ul {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
